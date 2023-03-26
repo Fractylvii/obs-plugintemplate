@@ -81,8 +81,8 @@
             "qtVersion": 6
         }
     },
-    "name": "obs-plugintemplate",
+    "name": "preach_HUD",
     "version": "1.0.0",
-    "author": "Your Name Here",
-    "email": "me@mymailhost.com"
+    "author": "Fractyl VII",
+    "email": "fractyl.github@gmail.com"
 }
