@@ -17,7 +17,9 @@ with this program. If not, see <https://www.gnu.org/licenses/>
 */
 
 #include <obs-module.h>
-
+#include <obs-frontend-api.h>
+#include <QWidget>
+#include "HUD-dock.hpp"
 #include "plugin-macros.generated.h"
 
 OBS_DECLARE_MODULE()
@@ -25,6 +27,13 @@ OBS_MODULE_USE_DEFAULT_LOCALE(PLUGIN_NAME, "en-US")
 
 bool obs_module_load(void)
 {
+	//Gets reference to main OBS window, and passing that window into the class
+	//This lets class know what it is a dockable widget to
+	QWidget *main_window = (QWidget *)obs_frontend_get_main_window();
+	HudWidget *hudWidget = new HudWidget(main_window);
+
+	obs_frontend_add_dock(hudWidget);
+
 	blog(LOG_INFO, "plugin loaded successfully (version %s)",
 	     PLUGIN_VERSION);
 	return true;

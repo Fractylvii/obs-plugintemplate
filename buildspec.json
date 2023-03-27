@@ -81,7 +81,7 @@
             "qtVersion": 6
         }
     },
-    "name": "preach_HUD",
+    "name": "preach-HUD-plugin",
     "version": "1.0.0",
     "author": "Fractyl VII",
     "email": "fractyl.github@gmail.com"
